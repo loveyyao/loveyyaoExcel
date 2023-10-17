@@ -10,7 +10,7 @@
     "declarationDir": "./dist/types/",
     "declarationMap": false,
     "moduleResolution": "node",
-    "module": "esnext",
+    "module": "commonjs",
     "target": "es5",
     "baseUrl": "./",
     "types": [

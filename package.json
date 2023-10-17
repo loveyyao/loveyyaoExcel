@@ -13,7 +13,12 @@
   },
   "author": "loveeyao",
   "license": "ISC",
+  "types": "./dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
+    "@types/uuid": "^9.0.5",
     "@webpack-cli/generators": "^3.0.7",
     "html-webpack-plugin": "^5.5.3",
     "prettier": "^3.0.3",
@@ -24,6 +29,8 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
+    "uuid": "^7.0.2",
+    "webpack5-ts-lib-boilerplate": "^1.0.0",
     "zrender": "^5.4.4"
   }
 }

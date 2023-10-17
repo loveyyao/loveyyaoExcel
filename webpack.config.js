@@ -9,6 +9,7 @@ const isProduction = process.env.NODE_ENV == 'production';
 const config = {
     entry: './src/index.ts',
     output: {
+        libraryTarget: 'umd', //类库加载方式
         path: path.resolve(__dirname, 'dist'),
     },
     devServer: {
@@ -17,7 +18,9 @@ const config = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'index.html',
+            template: 'test/index.html',
+            inject: 'body',
+            scriptLoading: 'blocking'
         }),
 
         // Add your plugins here
@@ -47,8 +50,8 @@ const config = {
 module.exports = () => {
     if (isProduction) {
         config.mode = 'production';
-        
-        
+
+
     } else {
         config.mode = 'development';
     }
